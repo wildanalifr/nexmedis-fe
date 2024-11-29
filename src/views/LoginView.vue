@@ -45,7 +45,6 @@ const onSubmit = handleSubmit(async (values) => {
     localStorage.setItem('token', data.token)
     const allUser = await UserService.fetchUsers()
     const selectedUser = allUser.filter((item) => item.email === values.email)
-    console.log('selectedUser', selectedUser[0])
 
     if (selectedUser.length) {
       setUserData(selectedUser[0])
@@ -64,7 +63,7 @@ const [password, passwordAttrs] = defineField('password')
   <div class="login min-h-screen flex justify-center items-center">
     <div class="hidden lg:block">
       <img
-        src="https://cdn.dribbble.com/userupload/7688436/file/original-0a0cdcf725b83fb74cae366b43f947a3.jpg?resize=1504x1128&vertical=center"
+        src="https://plus.unsplash.com/premium_photo-1658506671316-0b293df7c72b?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       />
     </div>
     <div class="max-w-md md:max-w-lg w-full mx-5 md:mx-10">

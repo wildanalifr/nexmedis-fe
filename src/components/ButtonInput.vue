@@ -1,6 +1,6 @@
 <template>
   <button
-    type="buttonType"
+    :type="buttonType"
     :class="[
       'w-full bg-blue-500 hover:bg-blue-700 transition-colors rounded-md py-2 cursor-pointer text-white',
       classProps,

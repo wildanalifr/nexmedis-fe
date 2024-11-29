@@ -19,7 +19,6 @@ export function useUserViewModel() {
     try {
       const response = await UserService.fetchUsers()
       users.value = response
-      console.log('users.value', users.value)
     } catch (err) {
       error.value = 'Failed to fetch users'
       console.error(err)
