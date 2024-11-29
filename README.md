@@ -1,18 +1,10 @@
 # nexmedis-fe
 
-This template should help get you started developing with Vue 3 in Vite.
+This project using Vue.js 3 with Composition API, Pinia, Tailwind CSS, Vue Router.
 
-## Recommended IDE Setup
+## Explanation
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
+There's two route /login for authentication and /homepage. After Login it will get token and user then save in localstorage, in /homepage is landing page for user also will display list of users from api. If user not login yet, will direct to /login.
 
 ## Project Setup
 
@@ -26,14 +18,6 @@ npm install
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+### For Login
 
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+Input Login Using username & password in reqres.in/api/users
