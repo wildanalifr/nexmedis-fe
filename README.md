@@ -1,6 +1,6 @@
 # nexmedis-fe
 
-This project using Vue.js 3 with Composition API, Pinia, Tailwind CSS, Vue Router.
+This project using Vue.js 3 with Composition API, Pinia, Tailwind CSS, Vue Router, vee-validate.
 
 ## Explanation
 
