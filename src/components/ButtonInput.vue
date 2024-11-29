@@ -11,11 +11,11 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue'
+import { defineProps, type PropType } from 'vue'
 
 defineProps({
   buttonName: { type: String },
-  buttonType: { type: String },
+  buttonType: { type: String as PropType<'button' | 'submit' | 'reset'>, default: 'button' },
   classProps: { type: String },
 })
 </script>
