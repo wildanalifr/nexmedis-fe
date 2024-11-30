@@ -31,7 +31,7 @@
 
         <!-- Copyright -->
         <div class="text-center md:text-right">
-          <p>&copy; 2024 Your Company. All rights reserved.</p>
+          <p>&copy; 2024 Healthy.</p>
         </div>
       </div>
     </div>

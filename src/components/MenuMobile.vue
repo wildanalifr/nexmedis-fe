@@ -32,10 +32,10 @@ const handleLogout = () => {
       ]"
     >
       <li class="list-none">
-        <a class="text-2xl hover:underline" href="#specialist">Specialist</a>
+        <a @click="handleIsOpen" class="text-2xl hover:underline" href="#specialist">Specialist</a>
       </li>
       <li class="list-none">
-        <a class="text-2xl hover:underline" href="#news">News</a>
+        <a @click="handleIsOpen" class="text-2xl hover:underline" href="#news">News</a>
       </li>
 
       <li class="list-none">
