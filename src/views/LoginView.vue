@@ -42,14 +42,17 @@ const onSubmit = handleSubmit(async (values) => {
     })
 
     const data: LoginResponse = await response.json()
-    localStorage.setItem('token', data.token)
+    await localStorage.setItem('token', data.token)
+
+    const isLocaStorage = localStorage.getItem('token')
+
+    if (isLocaStorage) {
+      await router.push('/homepage')
+    }
+
     const allUser = await UserService.fetchUsers()
     const selectedUser = allUser.filter((item) => item.email === values.email)
-
-    if (selectedUser.length) {
-      setUserData(selectedUser[0])
-      router.push({ name: 'homepage' })
-    }
+    setUserData(selectedUser[0])
   } catch (error) {
     console.log('error', error)
   }
