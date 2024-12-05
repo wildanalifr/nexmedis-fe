@@ -28,7 +28,7 @@
               class="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all"
             >
               <DialogTitle as="h3" class="text-lg font-medium leading-6 text-gray-900">
-                Add User
+                {{ props.isEditProp ? 'Edit' : 'Add' }} User
               </DialogTitle>
               <div class="mt-2">
                 <form @submit.prevent="onSubmit" class="space-y-3">
@@ -102,10 +102,10 @@ interface UserForm {
 }
 
 const { handleSubmit, errors, defineField, resetForm, setValues } = useForm<UserForm>({
-  //   initialValues: {
-  //     name: (props.isEditProp && props.userProp?.first_name + props.userProp?.last_name) || '',
-  //     job:  'jobss',
-  //   },
+  // initialValues: {
+  //   name: (props.isEditProp && props.userProp?.first_name + props.userProp?.last_name) || '',
+  //   job: 'jobssx',
+  // },
   validationSchema: Yup.object({
     name: Yup.string().required('Name is required'),
     job: Yup.string().required('Job is required'),
@@ -130,7 +130,6 @@ watch(
       })
     }
   },
-  { immediate: true },
 )
 
 const onSubmit = handleSubmit(async (values) => {
